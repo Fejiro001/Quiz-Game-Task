@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quiz Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--background of the quiz box-->
+	<div class="quiz-house">
+		<!--dispalys the question number you are on-->
+		<div class="question-number">
+			<h3>Question <span class="question-num"></span> of <span class="question-total"></span> </h3>
+		</div>
+		<div>
+			<img id="quiz-image" alt="quiz image" src="Images/quiz_image.jpg">
+		</div>
+		<!--The question to be answered-->
+		<div class="question">
+
+		</div>
+		<!--The options to be chosen from-->
+		<div class="options">
+			<div id="0" class="option1" onclick="scan(this)"></div>
+			<div id="1" class="option2" onclick="scan(this)"></div>
+			<div id="2" class="option3" onclick="scan(this)"></div>
+			<div id="3" class="option4" onclick="scan(this)"></div>
+		</div>
+		<!--Button to enter the next question-->
+		<div class="button">
+			<button type="button" onclick="next()" class="next-btn">Next</button>
+		</div>
+		<!--visual display of questions answered correctly or wrongly-->
+		<div class="answers-tracker" style="margin-left: 30px;">
+			
+		</div>
+	</div>
+
+	<!--displayed after end of quiz-->
+	<div class="quiz-over">
+		<div class="quiz-over-box">
+			<h1>
+				Quiz Done.<br>
+				Nice Work!<br>
+				You got <span class="answered-correctly"></span> out of <span class="question-total2"></span> answers correct!<br>
+				Start Over?
+			</h1>
+			<!--Quiz starts over after clicking this button-->
+			<button type="button" onclick="startOver()">Start Over</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
